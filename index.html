@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>アンケート</title>
+<style>
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+button {
+  padding: 15px 30px;
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+}
+.complete {
+  background-color: #ccc; /* わざと弱く */
+}
+.delete {
+  background-color: red; /* 強調 */
+  color: white;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h2>アンケートにご協力ありがとうございました</h2>
+<p>最後に操作を選択してください</p>
+
+<button class="complete" onclick="finish()">アンケートをすべて完了する</button>
+<button class="delete" onclick="mistake()">すべて削除する</button>
+
+<script>
+function finish() {
+  alert("送信完了しました！");
+}
+
+function mistake() {
+  alert("すべて削除されました（※実際には消えていません）");
+}
+</script>
+
+</body>
+</html>
