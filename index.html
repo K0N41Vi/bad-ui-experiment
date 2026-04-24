@@ -20,7 +20,7 @@ button {
   background-color: #ccc; /* わざと弱く */
 }
 .delete {
-  background-color: red; /* 強調 */
+  background-color: green; /* 強調 */
   color: white;
   font-weight: bold;
 }
@@ -30,10 +30,9 @@ button {
 <body>
 
 <h2>アンケートにご協力ありがとうございました</h2>
-<!-- <p>最後に操作を選択してください</p> -->
 
-<button class="complete" onclick="finish()">アンケートをすべて完了する</button>
-<button class="delete" onclick="mistake()">回答を削除する</button>
+<button class="complete" onclick="finish()">完了する</button>
+<button class="delete" onclick="mistake()">アンケートを削除する</button>
 
 <script>
 function finish() {
