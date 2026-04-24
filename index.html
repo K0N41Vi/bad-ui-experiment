@@ -9,6 +9,14 @@ body {
   text-align: center;
   margin-top: 50px;
 }
+
+/* アンケート部分 */
+.form-section {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* ボタン */
 button {
   padding: 15px 30px;
   font-size: 16px;
@@ -16,26 +24,67 @@ button {
   border: none;
   border-radius: 8px;
 }
+
+/* 罠ページ用 */
 .complete {
-  background-color: #ccc; /* わざと弱く */
+  background-color: #ccc;
 }
+
 .delete {
-  background-color: green; /* 強調 */
+  background-color: green;
   color: white;
   font-weight: bold;
+}
+
+/* 最初は罠を隠す */
+#trap {
+  display: none;
 }
 </style>
 </head>
 
 <body>
 
-<h2>アンケートにご協力ありがとうございました</h2>
+<!-- アンケート画面 -->
+<div id="form" class="form-section">
+  <h2>簡単なアンケート</h2>
+
+  <p>性別</p>
+  <label><input type="radio" name="gender"> 男性</label><br>
+  <label><input type="radio" name="gender"> 女性</label><br>
+
+  <p>普段どのくらいスマホを使いますか？</p>
+  <select>
+    <option>1時間未満</option>
+    <option>1〜3時間</option>
+    <option>3〜5時間</option>
+    <option>5時間以上</option>
+  </select>
+
+  <p>普段よく使うアプリ</p>
+  <label><input type="checkbox"> YouTube</label><br>
+  <label><input type="checkbox"> Instagram</label><br>
+  <label><input type="checkbox"> LINE</label><br>
+
+  <br>
+  <button onclick="goNext()">次へ進む</button>
+</div>
+
+<!-- 罠ページ -->
+<div id="trap">
+  <h2>アンケートにご協力ありがとうございました</h2>
   <p>回答を完了させてください</p>
 
-<button class="complete" onclick="finish()">完了する</button>
-<button class="delete" onclick="mistake()">アンケートを削除する</button>
+  <button class="complete" onclick="finish()">完了する</button>
+  <button class="delete" onclick="mistake()">アンケートを削除する</button>
+</div>
 
 <script>
+function goNext() {
+  document.getElementById("form").style.display = "none";
+  document.getElementById("trap").style.display = "block";
+}
+
 function finish() {
   alert("送信完了しました！");
 }
