@@ -35,18 +35,18 @@ body {
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 24px; /* 少し小さく */
   margin-bottom: 30px;
 }
 
 label {
-  font-size: 20px;
+  font-size: 17px; /* 少し小さく */
   display: block;
   margin: 10px 0;
 }
 
 select {
-  font-size: 18px;
+  font-size: 16px; /* 少し小さく */
   padding: 10px;
   margin-top: 10px;
 }
@@ -54,8 +54,13 @@ select {
 button {
   margin-top: 40px;
   padding: 15px;
-  font-size: 18px;
+  font-size: 16px; /* 少し小さく */
   width: 200px;
+
+  /* 中央寄せ修正 */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .complete {
@@ -66,6 +71,20 @@ button {
   background-color: green;
   color: white;
   font-weight: bold;
+}
+
+/* 罠画面だけ調整 */
+#trap.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 罠のボタンを横並びに戻す */
+#trap button {
+  display: inline-block;
+  width: auto;
+  margin: 10px;
 }
 </style>
 </head>
