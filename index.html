@@ -110,12 +110,13 @@ button {
 
   <!-- Q2 -->
   <div class="screen" id="q2">
-    <h3>1日のスマホ使用時間</h3>
+    <h3>HCI設計論は好きですか？</h3>
     <select>
-      <option>1時間未満</option>
-      <option>1〜3時間</option>
-      <option>3〜5時間</option>
-      <option>5時間以上</option>
+      <option>大好き</option>
+      <option>好き</option>
+      <option>どちらともいえない</option>
+      <option>あまり好きじゃない</option>
+      <option>嫌い</option>
     </select>
     <button onclick="next(2)">次へ</button>
   </div>
@@ -126,18 +127,11 @@ button {
     <label><input type="checkbox"> YouTube</label><br>
     <label><input type="checkbox"> Instagram</label><br>
     <label><input type="checkbox"> LINE</label><br>
+    <label><input type="checkbox"> X</label><br>
     <button onclick="next(3)">次へ</button>
   </div>
 
   <!-- Q4 -->
-  <div class="screen" id="q4">
-    <h3>オンラインショッピングを利用しますか？</h3>
-    <label><input type="radio" name="q4"> はい</label><br>
-    <label><input type="radio" name="q4"> いいえ</label><br>
-    <button onclick="next(4)">次へ</button>
-  </div>
-
-  <!-- Q5 -->
   <div class="screen" id="q5">
     <h3>UIの使いやすさを重視しますか？</h3>
     <label><input type="radio" name="q5"> とても重視する</label><br>
@@ -145,6 +139,15 @@ button {
     <label><input type="radio" name="q5"> あまり重視しない</label><br>
     <button onclick="showTrap()">回答を確認する</button>
   </div>
+  
+  <!-- Q5 -->
+  <div class="screen" id="q4">
+    <h3>戸田先生は好きですか？</h3>
+    <label><input type="radio" name="q4"> はい</label><br>
+    <label><input type="radio" name="q4"> はい</label><br>
+    <button onclick="next(4)">次へ</button>
+  </div>
+
 
 <div class="screen" id="trap">
   <h3>アンケートにご協力ありがとうございました</h3>
